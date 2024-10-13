@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz sur Sass</title>
+    <link rel="stylesheet" href="./style/css/main.css">
+</head>
+<body>
+    <div class="quiz">
+        <h1>Quiz sur <span class="quiz__title">sass</span></h1>
+
+        <div class="question">
+            <h2>Question 1 : Choix Multiple</h2>
+            <p><strong>Quel est l'avantage principal de Sass par rapport à CSS ?</strong></p>
+            <ul>
+                <li><input type="radio" name="q1" value="B"> A. Sass fonctionne plus rapidement que CSS.</li>
+                <li><input type="radio" name="q1" value="A"> B. Sass permet une meilleure organisation et réutilisation du code.</li>
+                <li><input type="radio" name="q1" value="C"> C. Sass est directement interprété par les navigateurs.</li>
+                <li><input type="radio" name="q1" value="D"> D. Sass remplace entièrement le CSS.</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <h2>Question 2 : Réponse Libre</h2>
+            <p><strong>Expliquez brièvement ce qu’est un "préprocesseur" CSS.</strong></p>
+            <textarea name="q2"></textarea>
+        </div>
+
+        <div class="question">
+            <h2>Question 3 : Choix Multiple</h2>
+            <p><strong>Lequel des codes suivants représente une méthode d'écriture CSS plus DRY (Don't Repeat Yourself) ?</strong></p>
+            <p>A.</p>
+            <pre><code>
+.button {
+  background-color: #f00;
+  color: white;
+}
+.nav-link {
+  background-color: #f00;
+  color: white;
+}
+            </code></pre>
+            <p>B.</p>
+            <pre><code>
+$main-color: #f00;
+$font-color: white;
+
+.button {
+  background-color: $main-color;
+  color: $font-color;
+}
+
+.nav-link {
+  background-color: $main-color;
+  color: $font-color;
+}
+            </code></pre>
+            <p>C.</p>
+            <pre><code>
+.button {
+  background-color: red;
+  color: white;
+}
+
+.nav-link {
+  background-color: red;
+  color: black;
+}
+            </code></pre>
+            <ul>
+                <li><input type="radio" name="q3" value="B"> A. </li>
+                <li><input type="radio" name="q3" value="B"> B. </li>
+                <li><input type="radio" name="q3" value="C"> C. </li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <h2>Question 4 : Réponse Libre</h2>
+            <p><strong>Quel est le rôle de la commande `--watch` lors de la compilation d'un fichier Sass ?</strong></p>
+            <textarea name="q4"></textarea>
+        </div>
+
+        <div class="question">
+            <h2>Question 5 : Illustration par du code</h2>
+            <p>Vous avez le code CSS suivant :</p>
+            <pre><code>
+.nav {
+  text-align: right;
+}
+.nav .nav__link {
+  font-size: 15px;
+  padding-left: 30px;
+}
+.nav .nav__link .nav__link--purple {
+  color: #a5b4fc;
+}
+            </code></pre>
+            <p><strong>Lequel de ces exemples de code représente la même structure en Sass (SCSS) avec un code plus DRY ?</strong></p>
+            <p>A.</p>
+            <pre><code>
+.nav {
+  text-align: right;
+  .nav__link {
+    font-size: 15px;
+    padding-left: 30px;
+    .nav__link--purple {
+      color: #a5b4fc;
+    }
+  }
+}
+            </code></pre>
+            <p>B.</p>
+            <pre><code>
+.nav {
+  text-align: right;
+}
+
+.nav__link {
+  font-size: 15px;
+  padding-left: 30px;
+}
+
+.nav__link--purple {
+  color: #a5b4fc;
+}
+            </code></pre>
+            <ul>
+                <li><input type="radio" name="q5" value="A"> A. </li>
+                <li><input type="radio" name="q5" value="B"> B. </li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <h2>Question 6 : Réponse Libre</h2>
+            <p><strong>Décrivez la différence entre les fichiers `.sass` et `.scss`.</strong></p>
+            <textarea name="q6"></textarea>
+        </div>
+
+        <div class="question">
+            <h2>Question 7 : Choix Multiple</h2>
+            <p><strong>Quel est le rôle d’une "variable" dans Sass ?</strong></p>
+            <ul>
+                <li><input type="radio" name="q7" value="B"> A. Stocker des propriétés CSS non réutilisables.</li>
+                <li><input type="radio" name="q7" value="A"> B. Stocker des valeurs réutilisables comme des couleurs ou des tailles.</li>
+                <li><input type="radio" name="q7" value="C"> C. Ajouter des animations au code CSS.</li>
+                <li><input type="radio" name="q7" value="D"> D. Organiser les fonctions JavaScript dans le code CSS.</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <h2>Question 8 : Réponse Libre</h2>
+            <p><strong>Écrivez un exemple de code Sass (SCSS) utilisant une variable pour une couleur de fond, et appliquez-la à deux classes différentes.</strong></p>
+            <textarea name="q8"></textarea>
+        </div>
+
+        <div class="question">
+            <h2>Question 9 : Choix Multiple</h2>
+            <p><strong>Quel est l’objectif principal des "mixin" dans Sass ?</strong></p>
+            <ul>
+                <li><input type="radio" name="q9" value="A"> A. Ils permettent de stocker des blocs de propriétés CSS réutilisables.</li>
+                <li><input type="radio" name="q9" value="B"> B. Ils permettent de compiler du CSS en Sass.</li>
+                <li><input type="radio" name="q9" value="C"> C. Ils sont utilisés pour définir des animations dans Sass.</li>
+                <li><input type="radio" name="q9" value="D"> D. Ils remplacent les variables dans Sass.</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <h2>Question 10 : Choix Multiple</h2>
+            <p><strong>Parmi les choix suivants, lequel utilise un "mixin" correctement dans Sass ?</strong></p>
+            <p>A.</p>
+            <pre><code>
+@mixin shadow {
+  box-shadow: 2px 2px 10px grey;
+}
+
+.card {
+  @include shadow;
+}
+            </code></pre>
+            <p>B.</p>
+            <pre><code>
+@mixin shadow {
+  box-shadow: 2px 2px 10px grey;
+}
+
+.card {
+  shadow;
+}
+            </code></pre>
+            <p>C.</p>
+            <pre><code>
+@mixin shadow() {
+  box-shadow: 2px 2px 10px grey;
+}
+
+.card {
+  @include shadow();
+}
+            </code></pre>
+            <p>D.</p>
+            <pre><code>
+@mixin shadow() {
+  box-shadow: 2px 2px 10px grey;
+}
+
+.card {
+  shadow;
+}
+            </code></pre>
+            <ul>
+                <li><input type="radio" name="q10" value="A"> A. </li>
+                <li><input type="radio" name="q10" value="C"> B. </li>
+                <li><input type="radio" name="q10" value="B"> C. </li>
+                <li><input type="radio" name="q10" value="D"> D. </li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <h2>Question 11 : Choix Multiple</h2>
+            <p><strong>Quel est le but des "functions" dans Sass ?</strong></p>
+            <ul>
+                <li><input type="radio" name="q11" value="A"> A. Effectuer des calculs et renvoyer des valeurs.</li>
+                <li><input type="radio" name="q11" value="B"> B. Créer des fichiers CSS dynamiques.</li>
+                <li><input type="radio" name="q11" value="C"> C. Compiler des fichiers Sass en CSS.</li>
+                <li><input type="radio" name="q11" value="D"> D. Organiser le code en modules.</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <h2>Question 12 : Réponse Libre</h2>
+            <p><strong>Écrivez une fonction Sass qui retourne la couleur d'un élément en fonction de son index.</strong></p>
+            <textarea name="q12"></textarea>
+        </div>
+
+        <div class="question">
+            <h2>Question 13 : Choix Multiple</h2>
+            <p><strong>Que signifie l'acronyme "BEM" dans le contexte du CSS ?</strong></p>
+            <ul>
+                <li><input type="radio" name="q13" value="A"> A. Block Element Modifier.</li>
+                <li><input type="radio" name="q13" value="B"> B. Block Element Module.</li>
+                <li><input type="radio" name="q13" value="C"> C. Block Extended Modifier.</li>
+                <li><input type="radio" name="q13" value="D"> D. Block Element Method.</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <h2>Question 14 : Choix Multiple</h2>
+            <p><strong>Quel est l'objectif de la méthodologie BEM ?</strong></p>
+            <ul>
+                <li><input type="radio" name="q14" value="A"> A. Créer un système de nommage pour les classes CSS.</li>
+                <li><input type="radio" name="q14" value="B"> B. Optimiser la vitesse de compilation des fichiers Sass.</li>
+                <li><input type="radio" name="q14" value="C"> C. Simplifier la syntaxe du CSS.</li>
+                <li><input type="radio" name="q14" value="D"> D. Faciliter l'intégration de Sass dans des projets JavaScript.</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <h2>Question 15 : Réponse Libre</h2>
+            <p><strong>Quels sont les avantages de l'utilisation de BEM avec Sass ?</strong></p>
+            <textarea name="q15"></textarea>
+        </div>
+
+        <div class="question">
+            <h2>Question 16 : Choix Multiple</h2>
+            <p><strong>Comment Sass gère-t-il l'imbrication de sélecteurs ?</strong></p>
+            <ul>
+                <li><input type="radio" name="q16" value="A"> A. Sass ne permet pas l'imbrication de sélecteurs.</li>
+                <li><input type="radio" name="q16" value="B"> B. L'imbrication permet de suivre la hiérarchie des éléments.</li>
+                <li><input type="radio" name="q16" value="C"> C. L'imbrication crée des conflits de styles.</li>
+                <li><input type="radio" name="q16" value="D"> D. L'imbrication est réservée aux mixins.</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <h2>Question 17 : Réponse Libre</h2>
+            <p><strong>Quels sont les principaux inconvénients de l'imbrication excessive dans Sass ?</strong></p>
+            <textarea name="q17"></textarea>
+        </div>
+
+        <div class="question">
+            <h2>Question 18 : Choix Multiple</h2>
+            <p><strong>Quel est l'usage des "placeholders" dans Sass ?</strong></p>
+            <ul>
+                <li><input type="radio" name="q18" value="A"> A. Ils sont utilisés pour des sélecteurs génériques qui ne devraient pas être compilés.</li>
+                <li><input type="radio" name="q18" value="B"> B. Ils sont utilisés pour stocker des variables CSS.</li>
+                <li><input type="radio" name="q18" value="C"> C. Ils sont des mixins sans paramètres.</li>
+                <li><input type="radio" name="q18" value="D"> D. Ils remplacent les classes CSS.</li>
+            </ul>
+        </div>
+
+        <div class="question">
+            <h2>Question 19 : Réponse Libre</h2>
+            <p><strong>Donnez un exemple d'utilisation d'un "placeholder" en Sass.</strong></p>
+            <textarea name="q19"></textarea>
+        </div>
+
+        <div class="question">
+            <h2>Question 20 : Choix Multiple</h2>
+            <p><strong>Comment Sass permet-il de gérer les "media queries" ?</strong></p>
+            <ul>
+                <li><input type="radio" name="q20" value="A"> A. Avec des mixins spécifiques.</li>
+                <li><input type="radio" name="q20" value="B"> B. En utilisant des variables.</li>
+                <li><input type="radio" name="q20" value="C"> C. En les intégrant directement dans le code CSS sans Sass.</li>
+                <li><input type="radio" name="q20" value="D"> D. Sass ne gère pas les media queries.</li>
+            </ul>
+        </div>
+
+        <button id="submit-btn">Soumettre</button>
+
+        <div class="quiz__result" id="result-container">
+            <h2>Résultats</h2>
+            <p id="score"></p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("submit-btn").addEventListener("click", function() {
+            let score = 0;
+
+            const correctAnswers = {
+                q1: "A",
+                q2: "Sass est un préprocesseur CSS qui permet d'utiliser des fonctionnalités comme les variables, les mixins, et l'imbrication.",
+                q3: "B",
+                q4: "La commande --watch permet de compiler automatiquement le fichier Sass lorsque des modifications sont détectées.",
+                q5: "A",
+                q6: "Les fichiers .sass n'utilisent pas de point-virgule ni d'accolades, alors que les fichiers .scss utilisent une syntaxe plus proche du CSS.",
+                q7: "B",
+                q8: "Exemple : $primary-color: blue;\n.button {\n  background-color: $primary-color;\n}\n.card {\n  background-color: $primary-color;\n}",
+                q9: "A",
+                q10: "A",
+                q11: "A",
+                q12: "Exemple de fonction : @function color-index($index) { ... }",
+                q13: "A",
+                q14: "A",
+                q15: "Ils améliorent la lisibilité et maintenabilité du code.",
+                q16: "B",
+                q17: "Les inconvénients sont la complexité accrue et un CSS généré plus lourd.",
+                q18: "A",
+                q19: "Exemple : %base { color: black; } .text { @extend %base; }",
+                q20: "A"
+            };
+
+            for (let question in correctAnswers) {
+                const userAnswer = document.querySelector(`input[name="${question}"]:checked`);
+                const userTextAnswer = document.querySelector(`textarea[name="${question}"]`);
+
+                if (userAnswer) {
+                    if (userAnswer.value === correctAnswers[question]) {
+                        score++;
+                    }
+                } else if (userTextAnswer) {
+                    if (userTextAnswer.value.trim() === correctAnswers[question]) {
+                        score++;
+                    }
+                }
+            }
+
+            const scoreText = `Vous avez obtenu ${score} sur ${Object.keys(correctAnswers).length} questions.`;
+            document.getElementById("score").innerText = scoreText;
+            document.getElementById("result-container").style.display = "block";
+        });
+
+
+    const alertSound = new Audio('./assets/son/meuh.mp3'); 
+let originalWidth = window.innerWidth;
+
+function triggerAlert() {
+        alert('Une combinaison de touches a été détectée !');
+        alertSound.play(); 
+        console.log('Une combinaison de touches a été détectée !'); 
+    }
+
+window.addEventListener('resize', function() {
+    if (window.innerWidth !== originalWidth) {
+        alert('Vous vous êtes perdu?');
+        alertSound.play(); 
+        console.log('Non non non!!!'); 
+        originalWidth = window.innerWidth;
+    }
+});
+
+window.addEventListener('keydown', function(event) {
+        if (event.ctrlKey || event.altKey) { 
+            triggerAlert();
+        }
+    });
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+    </script>
+</body>
+</html>
